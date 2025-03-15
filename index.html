@@ -28,12 +28,51 @@
         .profile-info {
             text-align: center;
         }
+        /* Navigation bar styling */
+        nav {
+            background-color: #333;
+            overflow: hidden;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        nav li {
+            float: left;
+        }
+        nav li a {
+            display: block;
+            color: #fff;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        nav li a:hover {
+            background-color: #111;
+        }
+        nav ul::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
     </style>
 </head>
 <body>
+    <!-- Navigation bar -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="data.html">Data</a></li>
+            <li><a href="model_reactions.html">Model Reactions</a></li>
+            <li><a href="contributors.html">Contributors</a></li>
+        </ul>
+    </nav>
+  
     <div class="header">
         <h1>Welcome to My GitHub Profile</h1>
     </div>
+    
     <div class="container">
         <div class="profile-info">
             <img src="https://avatars.githubusercontent.com/u/583231?v=4" alt="Profile Picture" class="profile-pic" width="150">
