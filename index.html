@@ -3,55 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Periodic Table - Period 1</title>
+    <title>GitHub Profile</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
         }
-        table {
-            border-collapse: collapse;
-            width: 50%;
-            margin: auto;
+        .header {
+            background-color: #24292e;
+            color: #ffffff;
+            padding: 20px 0;
             text-align: center;
         }
-        th, td {
-            border: 1px solid #ddd;
-            padding: 8px;
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
         }
-        th {
-            background-color: #4CAF50;
-            color: white;
+        .profile-pic {
+            border-radius: 50%;
         }
-        td {
-            background-color: #fff;
+        .profile-info {
+            text-align: center;
         }
     </style>
 </head>
 <body>
-    <table>
-        <tr>
-            <th>Element</th>
-            <th>Symbol</th>
-            <th>Atomic Number</th>
-            <th>Atomic Mass</th>
-        </tr>
-        <tr>
-            <td>Hydrogen</td>
-            <td>H</td>
-            <td>1</td>
-            <td>1.008</td>
-        </tr>
-        <tr>
-            <td>Helium</td>
-            <td>He</td>
-            <td>2</td>
-            <td>4.0026</td>
-        </tr>
-    </table>
+    <div class="header">
+        <h1>Welcome to My GitHub Profile</h1>
+    </div>
+    <div class="container">
+        <div class="profile-info">
+            <img src="https://avatars.githubusercontent.com/u/583231?v=4" alt="Profile Picture" class="profile-pic" width="150">
+            <h2>Your Name</h2>
+            <p>Bio: A short description about yourself.</p>
+            <p>Location: Your Location</p>
+            <p><a href="https://github.com/yourusername" target="_blank">Visit my GitHub</a></p>
+        </div>
+    </div>
 </body>
 </html>
