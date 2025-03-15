@@ -19,16 +19,15 @@
         }
         .container {
             width: 80%;
-            margin: 0 auto;
+            margin: 20px auto;
             padding: 20px;
         }
         .profile-pic {
             border-radius: 50%;
         }
-        .profile-info {
+        .profile-info, .periodic-table {
             text-align: center;
         }
-        /* Navigation bar styling */
         nav {
             background-color: #333;
             overflow: hidden;
@@ -56,6 +55,22 @@
             display: table;
             clear: both;
         }
+        .periodic-table {
+            display: grid;
+            grid-template-columns: repeat(18, 1fr);
+            gap: 10px;
+            justify-content: center;
+        }
+        .element {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            text-align: center;
+        }
+        .element:hover {
+            background-color: #f0f0f0;
+        }
     </style>
 </head>
 <body>
@@ -80,6 +95,155 @@
             <p>Bio: A short description about yourself.</p>
             <p>Location: Your Location</p>
             <p><a href="https://github.com/yourusername" target="_blank">Visit my GitHub</a></p>
+        </div>
+        
+        <h2>Interactive Periodic Table</h2>
+        <div class="periodic-table">
+            <!-- Only first 36 elements as a sample -->
+            <div class="element" style="grid-column: 1 / span 1;">
+                <p>H</p>
+                <p>1</p>
+            </div>
+            <div class="element" style="grid-column: 18 / span 1;">
+                <p>He</p>
+                <p>2</p>
+            </div>
+            <div class="element" style="grid-column: 1 / span 1; grid-row: 2;">
+                <p>Li</p>
+                <p>3</p>
+            </div>
+            <div class="element" style="grid-column: 2 / span 1; grid-row: 2;">
+                <p>Be</p>
+                <p>4</p>
+            </div>
+            <div class="element" style="grid-column: 13 / span 1; grid-row: 2;">
+                <p>B</p>
+                <p>5</p>
+            </div>
+            <div class="element" style="grid-column: 14 / span 1; grid-row: 2;">
+                <p>C</p>
+                <p>6</p>
+            </div>
+            <div class="element" style="grid-column: 15 / span 1; grid-row: 2;">
+                <p>N</p>
+                <p>7</p>
+            </div>
+            <div class="element" style="grid-column: 16 / span 1; grid-row: 2;">
+                <p>O</p>
+                <p>8</p>
+            </div>
+            <div class="element" style="grid-column: 17 / span 1; grid-row: 2;">
+                <p>F</p>
+                <p>9</p>
+            </div>
+            <div class="element" style="grid-column: 18 / span 1; grid-row: 2;">
+                <p>Ne</p>
+                <p>10</p>
+            </div>
+            <div class="element" style="grid-column: 1 / span 1; grid-row: 3;">
+                <p>Na</p>
+                <p>11</p>
+            </div>
+            <div class="element" style="grid-column: 2 / span 1; grid-row: 3;">
+                <p>Mg</p>
+                <p>12</p>
+            </div>
+            <div class="element" style="grid-column: 13 / span 1; grid-row: 3;">
+                <p>Al</p>
+                <p>13</p>
+            </div>
+            <div class="element" style="grid-column: 14 / span 1; grid-row: 3;">
+                <p>Si</p>
+                <p>14</p>
+            </div>
+            <div class="element" style="grid-column: 15 / span 1; grid-row: 3;">
+                <p>P</p>
+                <p>15</p>
+            </div>
+            <div class="element" style="grid-column: 16 / span 1; grid-row: 3;">
+                <p>S</p>
+                <p>16</p>
+            </div>
+            <div class="element" style="grid-column: 17 / span 1; grid-row: 3;">
+                <p>Cl</p>
+                <p>17</p>
+            </div>
+            <div class="element" style="grid-column: 18 / span 1; grid-row: 3;">
+                <p>Ar</p>
+                <p>18</p>
+            </div>
+            <div class="element" style="grid-column: 1 / span 1; grid-row: 4;">
+                <p>K</p>
+                <p>19</p>
+            </div>
+            <div class="element" style="grid-column: 2 / span 1; grid-row: 4;">
+                <p>Ca</p>
+                <p>20</p>
+            </div>
+            <div class="element" style="grid-column: 3 / span 1; grid-row: 4;">
+                <p>Sc</p>
+                <p>21</p>
+            </div>
+            <div class="element" style="grid-column: 4 / span 1; grid-row: 4;">
+                <p>Ti</p>
+                <p>22</p>
+            </div>
+            <div class="element" style="grid-column: 5 / span 1; grid-row: 4;">
+                <p>V</p>
+                <p>23</p>
+            </div>
+            <div class="element" style="grid-column: 6 / span 1; grid-row: 4;">
+                <p>Cr</p>
+                <p>24</p>
+            </div>
+            <div class="element" style="grid-column: 7 / span 1; grid-row: 4;">
+                <p>Mn</p>
+                <p>25</p>
+            </div>
+            <div class="element" style="grid-column: 8 / span 1; grid-row: 4;">
+                <p>Fe</p>
+                <p>26</p>
+            </div>
+            <div class="element" style="grid-column: 9 / span 1; grid-row: 4;">
+                <p>Co</p>
+                <p>27</p>
+            </div>
+            <div class="element" style="grid-column: 10 / span 1; grid-row: 4;">
+                <p>Ni</p>
+                <p>28</p>
+            </div>
+            <div class="element" style="grid-column: 11 / span 1; grid-row: 4;">
+                <p>Cu</p>
+                <p>29</p>
+            </div>
+            <div class="element" style="grid-column: 12 / span 1; grid-row: 4;">
+                <p>Zn</p>
+                <p>30</p>
+            </div>
+            <div class="element" style="grid-column: 13 / span 1; grid-row: 4;">
+                <p>Ga</p>
+                <p>31</p>
+            </div>
+            <div class="element" style="grid-column: 14 / span 1; grid-row: 4;">
+                <p>Ge</p>
+                <p>32</p>
+            </div>
+            <div class="element" style="grid-column: 15 / span 1; grid-row: 4;">
+                <p>As</p>
+                <p>33</p>
+            </div>
+            <div class="element" style="grid-column: 16 / span 1; grid-row: 4;">
+                <p>Se</p>
+                <p>34</p>
+            </div>
+            <div class="element" style="grid-column: 17 / span 1; grid-row: 4;">
+                <p>Br</p>
+                <p>35</p>
+            </div>
+            <div class="element" style="grid-column: 18 / span 1; grid-row: 4;">
+                <p>Kr</p>
+                <p>36</p>
+            </div>
         </div>
     </div>
 </body>
