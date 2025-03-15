@@ -71,23 +71,46 @@
         .element:hover {
             background-color: #f0f0f0;
         }
+        .link-block {
+            display: block;
+            grid-column: 4;
+            grid-row: 4;
+        }
+        .tooltip {
+            visibility: hidden;
+            background-color: #555;
+            color: #fff;
+            text-align: center;
+            border-radius: 5px;
+            padding: 5px;
+            position: absolute;
+            
+            bottom: 125%;
+            left: 50%;
+            margin-left: -50px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .element:hover .tooltip {
+            visibility: visible;
+            opacity: 1;
+        }
     </style>
 </head>
 <body>
     <!-- Navigation bar -->
-<!-- Navigation bar -->
-<nav>
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="data.html">Data</a></li>
-        <li><a href="model_reactions.html">Model Reactions</a></li>
-        <li><a href="contributors.html">Contributors</a></li>
-    </ul>
-</nav>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="data.html">Data</a></li>
+            <li><a href="model_reactions.html">Model Reactions</a></li>
+            <li><a href="contributors.html">Contributors</a></li>
+        </ul>
+    </nav>
 
-<div class="header">
-    <h1>Welcome to My GitHub Profile</h1>
-</div>
+    <div class="header">
+        <h1>Welcome to My GitHub Profile</h1>
+    </div>
     
     <div class="container">
         <div class="profile-info">
@@ -185,8 +208,9 @@
                 <p>Sc</p>
                 <p>21</p>
             </div>
-            <a href="titanium.html">
-                <div class="element" style="grid-column: 4; grid-row: 4;">
+            <!-- Anchor for Titanium element -->
+            <a href="titanium.html" class="link-block">
+                <div class="element">
                     <p>Ti</p>
                     <p>22</p>
                     <div class="tooltip">Titanium</div>
@@ -214,8 +238,7 @@
             </div>
             <div class="element" style="grid-column: 10; grid-row: 4;">
                 <p>Ni</p>
-                <p>28</p>
-            </div>
+                <p>28</            </div>
             <div class="element" style="grid-column: 11; grid-row: 4;">
                 <p>Cu</p>
                 <p>29</p>
@@ -266,8 +289,7 @@
             </div>
             <div class="element" style="grid-column: 5; grid-row: 5;">
                 <p>Nb</p>
-                <p>41</p>
-            </div>
+                <p>41</            </div>
             <div class="element" style="grid-column: 6; grid-row: 5;">
                 <p>Mo</p>
                 <p>42</p>
@@ -337,7 +359,7 @@
                 <p>72</p>
             </div>
             <div class="element" style="grid-column: 5; grid-row: 6;">
-                <p>Ta</p>
+                <p>Ta</></p>
                 <p>73</p>
             </div>
             <div class="element" style="grid-column: 6; grid-row: 6;">
