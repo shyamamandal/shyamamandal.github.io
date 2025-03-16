@@ -53,6 +53,11 @@
             padding: 10px;
             border-radius: 5px;
         }
+        .details img {
+            width: 100%;
+            max-width: 600px;
+            margin-top: 10px;
+        }
     </style>
 </head>
 <body>
@@ -63,18 +68,27 @@
         <a href="index.html" class="back-link">Back to Profile</a>
         <h2>Lattice Constants</h2>
         <ul>
-            <li><span class="data-point" data-details="BCC lattice constant using BEEF-vdW is 3.23 Å">BCC lattice constant using BEEF-vdW</span></li>
-            <li><span class="data-point" data-details="FCC lattice constant using BEEF-vdW is 4.08 Å">FCC lattice constant using BEEF-vdW</span></li>
-            <li><span class="data-point" data-details="HCP lattice constant using BEEF-vdW is a = 2.934 Å, c = 4.634 Å">HCP lattice constant using BEEF-vdW</span></li>
+            <li><span class="data-point" data-details="BCC lattice constant using BEEF-vdW is 3.23 Å" data-image="bcc_eos_plot.png">BCC lattice constant using BEEF-vdW</span></li>
+            <li><span class="data-point" data-details="FCC lattice constant using BEEF-vdW is 4.08 Å" data-image="fcc_eos_plot.png">FCC lattice constant using BEEF-vdW</span></li>
+            <li><span class="data-point" data-details="HCP lattice constant using BEEF-vdW is a = 2.934 Å, c = 4.634 Å" data-image="hcp_eos_plot.png">HCP lattice constant using BEEF-vdW</span></li>
         </ul>
-        <div class="details" id="details-container"></div>
+        <div class="details" id="details-container">
+            <p id="details-text"></p>
+            <img id="details-image" src="" alt="Lattice Constant Plot"/>
+        </div>
     </div>
 
     <script>
         document.querySelectorAll('.data-point').forEach(point => {
             point.addEventListener('click', () => {
                 const detailsContainer = document.getElementById('details-container');
-                detailsContainer.innerText = point.getAttribute('data-details');
+                const detailsText = document.getElementById('details-text');
+                const detailsImage = document.getElementById('details-image');
+
+                detailsText.innerText = point.getAttribute('data-details');
+                detailsImage.src = point.getAttribute('data-image');
+                detailsImage.alt = point.getAttribute('data-details');
+                
                 detailsContainer.style.display = 'block';
             });
         });
