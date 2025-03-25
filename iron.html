@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iron - Lattice Constants</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .header {
+            background-color: #24292e;
+            color: #ffffff;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #333;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            padding: 10px 15px;
+            background-color: #333;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .back-link:hover {
+            background-color: #555;
+        }
+        .data-point {
+            cursor: pointer;
+            color: blue;
+            text-decoration: underline;
+        }
+        .details {
+            display: none;
+            margin-top: 10px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .details img {
+            width: 100%;
+            max-width: 600px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Iron (Fe)</h1>
+    </div>
+    <div class="container">
+        <a href="index.html" class="back-link">Back to Profile</a>
+        <h2>Lattice Constants</h2>
+        <ul>
+            <li><span class="data-point" data-details="BCC lattice constant using BEEF-vdW is 2.76 Å" data-image="images/fe_bcc_eos_plot.png">BCC lattice constant using BEEF-vdW</span></li>
+            <li><span class="data-point" data-details="FCC lattice constant using BEEF-vdW is 3.46 Å" data-image="images/fe_fcc_eos_plot.png">FCC lattice constant using BEEF-vdW</span></li>
+            <li><span class="data-point" data-details="HCP lattice constant using BEEF-vdW is a = 2.466 Å, c = 3.898 Å" data-image="images/fe_hcp_eos_plot.png">HCP lattice constant using BEEF-vdW</span></li>
+        </ul>
+        <div class="details" id="details-container">
+            <p id="details-text"></p>
+            <img id="details-image" src="" alt="Lattice Constant Plot"/>
+        </div>
+    </div>
+    <script>
+        document.querySelectorAll('.data-point').forEach(point => {
+            point.addEventListener('click', () => {
+                const detailsContainer = document.getElementById('details-container');
+                const detailsText = document.getElementById('details-text');
+                const detailsImage = document.getElementById('details-image');
+
+                detailsText.innerText = point.getAttribute('data-details');
+                detailsImage.src = point.getAttribute('data-image');
+                detailsImage.alt = point.getAttribute('data-details');
+
+                detailsContainer.style.display = 'block';
+            });
+        });
+    </script>
+</body>
+</html>
